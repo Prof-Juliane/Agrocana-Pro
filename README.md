@@ -1,68 +1,58 @@
-# Agrocana-Pro
+# AgroCana Pro 🌱📊
 
-Aplicação web acadêmica para explorar cálculos e visualizações relacionados à
-cultura da cana-de-açúcar. O projeto usa Python e Streamlit.
+<div align="center">
 
-> **Importante:** os indicadores, séries e arquivos CSV disponibilizados na
-> aplicação são demonstrativos. Eles não são dados oficiais da CONAB, do INMET
-> ou de outras instituições, nem constituem previsões agronômicas validadas.
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-App-red.svg)](https://streamlit.io/)
+[![Status Acadêmico](https://img.shields.io/badge/Status-Ativo-green.svg)](https://github.com/Prof-Juliane/Agrocana-Pro)
 
-Este projeto faz parte do Projeto Integrador em Computação IV (DRP10 - Turma
-001).
+Plataforma web acadêmica interativa desenvolvida com Python e Streamlit para exploração de cálculos agronômicos, simulações e visualização de dados referentes à cultura da cana-de-açúcar.
 
-## Funcionalidades
+🌐 **Acesse a aplicação online:** [agrocana-pro.onrender.com](https://agrocana-pro.onrender.com)
 
-- **Dashboard demonstrativo:** exibe indicadores e séries de exemplo para TCH,
-  ATR e precipitação.
-- **Simulador didático:** aplica uma fórmula simplificada aos parâmetros de
-  precipitação, temperatura, solo e corte do canavial.
-- **Calculadora agrícola e financeira:** inclui estimativas de corretivos,
-  fertilizantes, custos de produção, rentabilidade e TCH/ATR.
-- **Gestão espacial:** exibe um mapa de exemplo com talhões ilustrativos.
-- **Dados e fontes:** apresenta referências para consulta e permite baixar CSVs
-  de exemplo e um modelo municipal vazio.
+</div>
 
-O aplicativo não está conectado às fontes de dados oficiais. Os mapas base
-dependem de acesso à internet para carregar os tiles do OpenStreetMap e do Esri.
+---
 
-## Tecnologias
+## ⚠️ Aviso Importante
 
-- Python
-- [Streamlit](https://streamlit.io/)
-- Pandas e NumPy
-- Plotly
-- Folium e Streamlit-Folium
+Os indicadores, séries temporais e arquivos CSV disponibilizados na aplicação possuem caráter **estritamente demonstrativo e didático**. Eles não representam dados oficiais de órgãos governamentais ou de pesquisa (como CONAB ou INMET), nem constituem previsões agronômicas validadas em campo para fins comerciais.
 
-## Executar localmente
+---
 
-Requer Python compatível com as versões das dependências listadas em
-[`requirements.txt`](requirements.txt).
+## 🎯 Contexto Acadêmico
 
-No PowerShell, na pasta do projeto:
+Este projeto integra as atividades do **Projeto Integrador em Computação IV** (DRP10 - Turma 001), tendo como principal objetivo articular os fundamentos da engenharia de software, modelagem de dados e conceitos agronômicos em uma solução acessível e intuitiva via navegador.
 
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
-python -m streamlit run app.py
-```
+---
 
-O Streamlit disponibiliza o endereço local no terminal; normalmente é
-[`http://localhost:8501`](http://localhost:8501). Mantenha o terminal aberto
-enquanto estiver usando a aplicação. Para pará-la, pressione `Ctrl+C` nele.
+## 🚀 Funcionalidades da Plataforma
 
-Se a política de execução do PowerShell impedir a ativação do ambiente virtual,
-execute os comandos sem ativá-lo, usando diretamente
-`.\.venv\Scripts\python.exe -m pip install -r requirements.txt` e
-`.\.venv\Scripts\python.exe -m streamlit run app.py`.
+* **Dashboard Demonstrativo:** Visualização de indicadores-chave e séries históricas de exemplo para Toneladas de Cana por Hectare (**TCH**), Açúcar Total Recuperável (**ATR**) e índices pluviométricos.
+* **Simulador Didático:** Aplicação de modelo simplificado para projeção de impacto considerando precipitação acumulada, temperatura média, características de solo e ciclo de corte.
+* **Calculadora Agrícola e Financeira:**
+  * Estimativa de corretivos de solo (calagem e gessagem) e adubação (NPK).
+  * Levantamento simplificado de custos operacionais e margem de rentabilidade.
+  * Cálculos e estimativas correlacionadas de TCH e ATR.
+* **Gestão Espacial:** Visualização geoespacial interativa com talhões ilustrativos utilizando **Folium**. *(Nota: Os mapas utilizam camadas do OpenStreetMap e Esri, exigindo conexão com a internet para renderização dos tiles).*
+* **Repositório de Dados:** Área dedicada com referências técnicas, download de datasets sintéticos em CSV e templates municipais padronizados.
 
-## Estrutura principal
+---
 
-```text
-app.py                    Ponto de entrada do Streamlit
-home.py                   Navegação, dashboard, simulador e dados de exemplo
-calculadora_agricola.py   Calculadora agrícola e financeira
-modulo_mapas.py           Visualização de talhões de exemplo
-requirements.txt          Dependências para instalação na raiz do projeto
-data/requirements.txt     Lista principal de dependências
-```
+## 🛠️ Tecnologias Utilizadas
+
+* **Linguagem:** Python
+* **Interface & Visualização:** Streamlit, Pandas, Plotly
+* **Mapeamento Geoespacial:** Leaflet.js / Folium
+* **Deploy:** Render
+
+---
+
+## 💻 Como Executar o Projeto Localmente
+
+Se desejar clonar e executar a aplicação em sua máquina de desenvolvimento:
+
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/Prof-Juliane/Agrocana-Pro.git](https://github.com/Prof-Juliane/Agrocana-Pro.git)
+   cd Agrocana-Pro
